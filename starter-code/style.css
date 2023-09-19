@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'JetBrainsMono-Bold';
+    src: url('assets/fonts/static/JetBrainsMono-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-BoldItalic';
+    src: url('assets/fonts/static/JetBrainsMono-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-Italic-VariableFont_wght';
+    src: url('assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-VariableFont_wght.ttf';
+    src: url('assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+:root {
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65;
+    --neon-green: #A4FFAF;
+    --almost-white: #E6E5EA;
+    --grey: #817D92;
+    --dark-grey: #24232C;
+    --very-dark-grey: #18171F;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: var(--very-dark-grey); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    padding: 15px;
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 25px;
+    color: var(--grey)
+}
+
+.container {
+    max-width: 540px;
+    height: 632px;
+}
+
+.container .header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--dark-grey);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header input {
+    font-family: 'JetBrainsMono-Bold';
+    width: calc(100% - 100px);
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--almost-white);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.container .header svg {
+    cursor: pointer;
+}
+
+.container .header svg:hover path {
+    fill: var(--almost-white);
+}
+
+.container .header > div {
+    display: flex;
+    align-items: center;
+}
+
+.container .header > div span {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "JetBrainsMono-Bold";
+    color: var(--neon-green);
+    margin-right: 20px;
+}
+
+.container .body {
+    height: 528px;
+    margin-top: 25px;
+    background-color: var(--dark-grey);
+    padding: 30px;
+    user-select: none;
+}
+
+.container .body .char-length-div .char-length-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .body .char-length-div .char-length-header span {
+    font-size: 18px;
+    font-family: "JetBrainsMono-Bold";
+    color: var(--almost-white);
+}
+
+.container .body .char-length-div .char-length-header div {
+    font-size: 30px;
+    font-family: "JetBrainsMono-Bold";
+    color: var(--neon-green);
+}
+
+.container .body .char-length-div input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container .body .char-length-div input {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--very-dark-grey);
+    border-radius: 0px;
+    outline: none;
+}
+
+.container .body .char-length-div input::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 28px; 
+    height: 28px; 
+    background: var(--almost-white); 
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+
+.container .body .char-length-div input::-webkit-slider-thumb:hover {
+    border: 2px solid var(--neon-green);
+    background: var(--very-dark-grey);
+}
+
+.container .body .include-list {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.container .body .include-list .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--almost-white);
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .body .include-list .checkbox.checked {
+    background-color: var(--neon-green);
+    border: none;
+}
+
+.container .body .include-list .checkbox.checked svg path {
+    stroke: var(--dark-grey);
+}
+
+.container .body .include-list .checkbox svg path {
+    stroke: transparent;
+}
+
+.container .body .include-list li {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container .body .include-list li label {
+    font-family: "JetBrainsMono-Bold";
+    font-size: 18px;
+    color: var(--almost-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.container .body .include-list li input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.container .body .include-list li input:hover {
+    outline: 1px solid var(--neon-green);
+    accent-color: none;
+}
+
+.container .body .include-list li input:checked {
+    accent-color: var(--neon-green);
+}
+
+.container .body .strength-div {
+    width: 100%;
+    height: 72px;
+    background-color: var(--very-dark-grey);
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .body .strength-div > span{
+    font-size: 18px;
+    font-family: "JetBrainsMono-Bold";
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.container .body .strength-div .level {
+    display: flex;
+    align-items: center;
+}
+
+.container .body .strength-div .level > span {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: "JetBrainsMono-Bold";
+    color: var(--almost-white);
+    margin-right: 20px;
+}
+
+.container .body .strength-div .level .level-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .body .strength-div .level .level-amount .level-bar {
+    height: 28px;
+    width: 10px;
+    border: 2px solid var(--almost-white);
+    margin-right: 10px;
+}
+
+.container .body .strength-div .level .level-amount[data-level='level-1'] div:first-child {
+    background-color: var(--red);
+    border: none;
+}
+
+.container .body .strength-div .level .level-amount[data-level='level-2'] div:nth-last-child(n + 3) {
+    background-color: var(--orange);
+    border: none;
+}
+
+.container .body .strength-div .level .level-amount[data-level='level-3'] div:nth-last-child(n + 2) {
+    background-color: var(--yellow);
+    border: none;
+}
+
+.container .body .strength-div .level .level-amount[data-level='level-4'] div:nth-last-child(n + 1) {
+    background-color: var(--neon-green);
+    border: none;
+}
+
+.container .body .generate-btn {
+    width: 100%;
+    height: 65px;
+    background-color: var(--neon-green);
+    outline: none;
+    margin-top: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "JetBrainsMono-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container .body .generate-btn svg {
+    margin-left: 20px;
+}
+
+.container .body .generate-btn:hover {
+    border: 2px solid var(--neon-green);
+    background-color: transparent;
+    color: var(--neon-green);
+}
+
+.container .body .generate-btn:hover svg path {
+    fill: var(--neon-green);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .container .header input {
+        font-size: 22px;
+    }
+
+    .container .body .include-list li label {
+        font-size: 14px;
+    }
+}
